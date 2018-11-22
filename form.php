@@ -69,7 +69,7 @@ $query_insert = 'INSERT INTO messages (name, message, age, sex, date_open_form, 
                       "' . $ageResult . '", 
                       "' . $genderAltNames[$gender] . '" , 
                       "' . $dateOpenForm . '" , 
-                      "' . $dateOpenForm . '" ,
+                      "' . $dateSendForm . '" ,
                       "' . $diffDate->format("%H:%I:%S") . '" )';
 
 //mysqli_query($link, $query_insert) or die('Ошибка' . mysqli_error($link));
