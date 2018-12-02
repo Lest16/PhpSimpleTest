@@ -15,23 +15,13 @@ if (!isset($age)) {
     echo "Вы не заполнили поле возраст<br>";
 }
 else{
-    foreach($age as $item)
-    {
-        if (end($age) == $item)
-        {
-            $ageResult.= htmlentities($item);
-        }
-        else
-        {
-            $ageResult.= htmlentities($item) . "|";
-        }
-
-    }
+    $ageResult = implode("|", $age);
 }
+
 $dateOpenForm = htmlentities($_POST['dateOpenForm']);
 $passwordHash = $_POST['passwordHash'];
 
-if ($passwordHash != md5('qwerty123')){
+if ($passwordHash != md5($password)){
     echo "Неправильный пароль!<br>";
 }
 
